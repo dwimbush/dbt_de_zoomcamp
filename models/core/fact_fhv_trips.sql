@@ -12,7 +12,9 @@ dim_zones as (
 )
  select     
     fhv_data.PUlocationID,
-    fhv_data.DOlocationID   
+    fhv_data.DOlocationID,
+    fhv_data.pickup_datetime,
+    fhv_data.dropoff_datetime   
  from fhv_data
  inner join dim_zones as pickup_zone
  on fhv_data.PUlocationID = pickup_zone.locationid
